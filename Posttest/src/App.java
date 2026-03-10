@@ -20,7 +20,7 @@ public class App {
                     System.out.print("Masukkan jumlah setor tunai: Rp");
                     int setor = input.nextInt();
                     saldo += setor;
-                    System.out.printf("Saldo Anda setelah setor tunai: Rp%d \n", saldo);
+                    System.out.println("Saldo Anda setelah setor tunai: Rp" + saldo);
                     break;
                 case 3:
                     System.out.print("Masukkan jumlah tarik tunai: Rp");
@@ -33,7 +33,7 @@ public class App {
                             break;
                         }
                         saldo -= tarik;
-                        System.out.printf("Saldo Anda setelah tarik tunai: Rp%d \n", saldo);
+                        System.out.println("Saldo Anda setelah tarik tunai: Rp" + saldo);
                     }
                     break;
                 case 4:
