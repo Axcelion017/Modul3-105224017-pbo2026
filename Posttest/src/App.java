@@ -19,6 +19,10 @@ public class App {
                 case 2:
                     System.out.print("Masukkan jumlah setor tunai: Rp");
                     int setor = input.nextInt();
+                    if (setor < 0) {
+                        System.out.println("Jumlah setor tunai tidak boleh negatif.");
+                        break;
+                    }
                     saldo += setor;
                     System.out.println("Saldo Anda setelah setor tunai: Rp" + saldo);
                     break;
