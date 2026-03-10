@@ -7,23 +7,23 @@ public class Latihan1 {
         System.out.print("Masukan angka desimal kedua: ");
         float angka2 = sc.nextFloat();
         System.out.print("Masukan operator (+, -, *, /): ");
-        char operator = sc.next().charAt(0);
+        String operator = sc.next();
         sc.close();
         float hasil;
         switch (operator) {
-            case '+':
+            case "+":
                 hasil = angka1 + angka2;
                 System.out.println("Hasil: " + hasil);
                 break;
-            case '-':
+            case "-":
                 hasil = angka1 - angka2;
                 System.out.println("Hasil: " + hasil);
                 break;
-            case '*':
+            case "*":
                 hasil = angka1 * angka2;
                 System.out.println("Hasil: " + hasil);
                 break;
-            case '/':
+            case "/":
                 if (angka2 != 0) {
                     hasil = angka1 / angka2;
                     System.out.println("Hasil: " + hasil);
