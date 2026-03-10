@@ -10,23 +10,16 @@ public class App {
         double hemoglobin = sc.nextDouble();
         sc.close();
 
-        if (usia < 17) {
-            System.out.println("Maaf, anda belum cukup umur untuk mendonorkan darah");
-        } else if (usia > 60) {
-            System.out.println("Maaf, anda sudah terlalu tua untuk mendonorkan darah");
-        } else {
-            if (berat <= 45) {
-                System.out.println("Maaf, berat badan anda tidak mencukupi untuk mendonorkan darah");
-            } else {
-                if (hemoglobin < 12.5) {
-                    System.out.println("Maaf, kadar hemoglobin anda tidak mencukupi untuk mendonorkan darah");
-                } else if (hemoglobin > 17.0) {
-                    System.out.println("Maaf, kadar hemoglobin anda terlalu tinggi untuk mendonorkan darah");
-                } else {
-                    System.out.println("Anda memenuhi syarat untuk mendonorkan darah");
-                }
-            }
-        }
+        if (usia >17){
+            if (usia < 60){
+                if (berat > 45){
+                    if (hemoglobin > 12.5) 
+                        if (hemoglobin < 17.0) System.out.println("Anda memenuhi syarat untuk mendonorkan darah");
+                        else System.out.println("Maaf, kadar hemoglobin anda terlalu tinggi untuk mendonorkan darah");
+                    else System.out.println("Maaf, kadar hemoglobin anda tidak mencukupi untuk mendonorkan darah");
+                }else  System.out.println("Maaf, berat badan anda tidak mencukupi untuk mendonorkan darah");
+            }else System.out.println("Maaf, anda sudah terlalu tua untuk mendonorkan darah");
+        }else System.out.println("Maaf, anda belum cukup umur untuk mendonorkan darah");
 
     }
 }  
