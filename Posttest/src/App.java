@@ -14,7 +14,7 @@ public class App {
             menu = input.nextInt();
             switch(menu){
                 case 1:
-                    System.out.printf("Saldo Anda: Rp%d \n", saldo);
+                    System.out.println("Saldo Anda: Rp%d"+ saldo);
                     break;
                 case 2:
                     System.out.print("Masukkan jumlah setor tunai: Rp");
