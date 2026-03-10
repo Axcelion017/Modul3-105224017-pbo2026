@@ -21,10 +21,10 @@ public class App {
                     int setor = input.nextInt();
                     if (setor < 0) {
                         System.out.println("Jumlah setor tunai tidak boleh negatif.");
-                        break;
-                    }
-                    saldo += setor;
-                    System.out.println("Saldo Anda setelah setor tunai: Rp" + saldo);
+                    }else{
+                        saldo += setor;
+                        System.out.println("Saldo Anda setelah setor tunai: Rp" + saldo);
+                    } 
                     break;
                 case 3:
                     System.out.print("Masukkan jumlah tarik tunai: Rp");
@@ -35,7 +35,7 @@ public class App {
                         saldo -= tarik;
                         if (saldo < 50000) {
                             System.out.println("Peringatan: Saldo Anda mencapai minimum. Saldo batal ditarik.");
-                            saldo += tarik; // Mengembalikan saldo ke nilai sebelum ditarik
+                            saldo += tarik; 
                         }else {
                         System.out.println("Saldo Anda setelah tarik tunai: Rp" + saldo);
                         }
