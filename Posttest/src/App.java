@@ -3,7 +3,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         int saldo = 500000;
-        int menu = 0;
+        int menu;
         do{
             System.out.println("Program Mesin ATM");
             System.out.println("1. Cek Saldo");
@@ -23,11 +23,15 @@ public class App {
                     System.out.printf("Saldo Anda setelah setor tunai: Rp%d \n", saldo);
                     break;
                 case 3:
-                    System.out.println("Masukkan jumlah tarik tunai: Rp");
+                    System.out.print("Masukkan jumlah tarik tunai: Rp");
                     int tarik = input.nextInt();
                     if(tarik > saldo){
                         System.out.println("Saldo tidak cukup untuk melakukan tarik tunai.");
                     } else {
+                        if (tarik < 50000) {
+                            System.out.println("Tarik tunai minimal Rp50.000.");
+                            break;
+                        }
                         saldo -= tarik;
                         System.out.printf("Saldo Anda setelah tarik tunai: Rp%d \n", saldo);
                     }
