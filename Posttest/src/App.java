@@ -32,12 +32,13 @@ public class App {
                     if(tarik > saldo){
                         System.out.println("Saldo tidak cukup untuk melakukan tarik tunai.");
                     } else {
-                        if (tarik < 50000) {
-                            System.out.println("Tarik tunai minimal Rp50.000.");
-                            break;
-                        }
                         saldo -= tarik;
+                        if (saldo < 50000) {
+                            System.out.println("Peringatan: Saldo Anda mencapai minimum. Saldo batal ditarik.");
+                            saldo += tarik; // Mengembalikan saldo ke nilai sebelum ditarik
+                        }else {
                         System.out.println("Saldo Anda setelah tarik tunai: Rp" + saldo);
+                        }
                     }
                     break;
                 case 4:
