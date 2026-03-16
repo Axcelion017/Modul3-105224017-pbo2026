@@ -29,7 +29,7 @@ public class App {
                         }else if (page < 18 && page > 0){
                             System.out.println("Umur tidak mencukupi.");
                             continue;
-                        }else if (page < 120 && page >= 18){
+                        }else if (page <= 120 && page >= 18){
                             fcount++;
                         }else{
                             System.out.println("Usia tidak valid. Masukan Ulang usianya.");
